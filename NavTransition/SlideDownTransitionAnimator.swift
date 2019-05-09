@@ -11,14 +11,21 @@ import UIKit
 
 class SlideDownTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
+    var isPresenting: Bool = false
     
     // MARK: Delegate Protocols
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        isPresenting = true
         return self
+        
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        isPresenting = false
         return self
+        
     }
     
     
@@ -48,7 +55,9 @@ class SlideDownTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioni
         let offScreenDown = CGAffineTransform(translationX: 0, y: container.frame.height)
         
         //Making the toView offScreen
-        toView.transform = offScreenUp
+        if isPresenting {
+            toView.transform = offScreenUp
+        }
         
         //Adding both views to the container view
         container.addSubview(fromView)
@@ -57,14 +66,18 @@ class SlideDownTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioni
         //Perform the Animation
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: {
             
+            if self.isPresenting {
              fromView.transform = offScreenDown
              fromView.alpha = 0.5
              toView.transform = CGAffineTransform.identity
-             toView.alpha = 1.0
-            
-            
+            } else {
+                fromView.transform = offScreenUp
+                fromView.alpha = 1.0
+                toView.transform = CGAffineTransform.identity
+                toView.alpha = 1.0
+            }
         }, completion: { finished in
-            transitionContext.completeTransition(trues)
+            transitionContext.completeTransition(true)
         })
         
         
