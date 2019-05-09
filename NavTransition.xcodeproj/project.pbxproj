@@ -14,6 +14,7 @@
 		F412074F1DC0B8A600CF8039 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412074E1DC0B8A600CF8039 /* MenuViewController.swift */; };
 		F41207511DC0B90400CF8039 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41207501DC0B90400CF8039 /* MenuCell.swift */; };
 		F42D61431DC0BD670096F13D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42D61421DC0BD670096F13D /* DetailViewController.swift */; };
+		F4F37F4A2284E6FB005CCD2B /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F37F492284E6FB005CCD2B /* SlideRightTransitionAnimator.swift */; };
 		F4F93E0A2283CEC9005EF7DD /* SlideDownTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F93E092283CEC9005EF7DD /* SlideDownTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F412074E1DC0B8A600CF8039 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F41207501DC0B90400CF8039 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		F42D61421DC0BD670096F13D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F4F37F492284E6FB005CCD2B /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
 		F4F93E092283CEC9005EF7DD /* SlideDownTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				F41207501DC0B90400CF8039 /* MenuCell.swift */,
 				F42D61421DC0BD670096F13D /* DetailViewController.swift */,
 				F4F93E092283CEC9005EF7DD /* SlideDownTransitionAnimator.swift */,
+				F4F37F492284E6FB005CCD2B /* SlideRightTransitionAnimator.swift */,
 			);
 			path = NavTransition;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F37F4A2284E6FB005CCD2B /* SlideRightTransitionAnimator.swift in Sources */,
 				F412073D1DC0B39D00CF8039 /* AppDelegate.swift in Sources */,
 				F412074F1DC0B8A600CF8039 /* MenuViewController.swift in Sources */,
 				F41207511DC0B90400CF8039 /* MenuCell.swift in Sources */,
